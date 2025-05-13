@@ -52,7 +52,6 @@ instructionbonus = {
 }
 
 label_dict = {}
-# Prabhav Singhal
 
 # sign extension functions -->
 def sign_ext_RISB(n):
@@ -96,8 +95,6 @@ def j_type(register):
                 z = sign_ext_J((label_dict[register[1]] - count) * 4)
 
     return (z[0]+z[10:20]+z[9]+z[1:9]+registers[register[0]]+opcode)
-
-# Darshan Bothra
 
 def r_type(register: list[str], instruction: str)->str:
     f3 = instructionR[instruction][1]
@@ -145,7 +142,6 @@ def bonustype(register: list[str], instruction: str)->str:
         instruct_32_bit = "0"*32
     return instruct_32_bit
 
-# Garv Ahuja
 def main(filename):
     output = []
     file_name = filename
